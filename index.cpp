@@ -2,20 +2,74 @@
 #include "MyString.h"
 #include "Student.h"
 #include <windows.h>;
+#include "Fraction.h"
 using namespace std;
 
+void print(Student& obj)
+{
+    obj.show();
+}
+Student createStudent(int age)
+{
+    char name[] = "No name";
+    Student std1 = { 112, age, name };
+    return std1;
+}
+
+int operator + (int val, Fraction fr)
+{
+    return 0;
+}
 
 
 int main()
 {
-    char name[10];
+    Fraction fr;
+    fr.setNumerator(10);
+    fr.setDenumerator(5);
+
+    Fraction fr2;
+    fr2.setNumerator(100);
+    fr2.setDenumerator(25);
+
+   int result = fr + fr2;
+   int result2 = fr.operator+(fr2);
+
+   int result3 = fr + 10 ;
+
+   int result4 = 10 + fr;
+
+   cout << result3 << endl;
+
+
+   cout << result;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /*  char name[10];
     cout << "Enter name: ";
     cin >> name;
     Student std1 = { 111,30, name};
-    std1.show();
-
+    cout << "Address: " << &std1 << endl;
+    print(std1);*/
+  /*  Student std = createStudent(20);
+    std.show();*/
+ /*   
     Student std2 = std1;
-    std2.show();
+    std2.show();*/
 
    /* Student std3 = { 234,20,name };
     std3 = std1;*/

@@ -3,11 +3,14 @@ class Student
 {
 	int id;
 	int age;
-	char* name;
+	char* name = nullptr;
 public:
+	Student();
 	Student(int id, int age, char* name);
 	Student(const Student& obj); //конструктор копирования
-	void show();
+	void show() const;
+	int getAge() const;
+	int getId() const;
 	~Student();
 };
 
